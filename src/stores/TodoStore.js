@@ -2,7 +2,7 @@ import React from 'react';
 import { observable, action, computed, configure, runInAction } from 'mobx';
 import axios from 'axios';
 axios.defaults.baseURL = 'http://todo-laravel.test/api';
-configure({enforceActions: true});
+configure({enforceActions:"always"});
 
 class TodoStore {
   @observable todoInput = React.createRef();
